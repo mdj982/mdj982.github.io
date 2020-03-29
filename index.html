@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
   
 
   
@@ -26,10 +26,10 @@
   
 <link rel="stylesheet" href="/css/style.css">
 
-<meta name="generator" content="Hexo 4.2.0"></head>
+<meta name="generator" content="Hexo 4.2.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
 
 <body>
-  <div id="container">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="container">
     <div id="wrap">
       <header id="header">
   <div id="banner"></div>
@@ -64,10 +64,10 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-edit_formats" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-mdview" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/03/29/edit_formats/" class="article-date">
-  <time datetime="2020-03-29T12:46:41.129Z" itemprop="datePublished">2020-03-29</time>
+    <a href="/2020/03/29/mdview/" class="article-date">
+  <time datetime="2020-03-29T14:28:21.235Z" itemprop="datePublished">2020-03-29</time>
 </a>
     
   </div>
@@ -78,7 +78,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/29/edit_formats/">About Code Highlight</a>
+      <a class="article-title" href="/2020/03/29/mdview/">About Markdown-Codeblocks</a>
     </h1>
   
 
@@ -86,41 +86,118 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h2><p>bash commands:</p>
-<!-- --> 
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">echo</span> <span class="string">"hello world"</span></span><br><span class="line">$ sudo <span class="built_in">echo</span> <span class="string">"hello world"</span></span><br></pre></td></tr></table></figure>
-<!-- --> 
-
-<p>c++ codes:</p>
-<!-- --> 
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"hello world"</span> &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>markdown codes:</p>
-<pre><code>code block begin.
-&lt;!-- --&gt;
-<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">this this may cause troubles since nested "<span class="code">```</span>" exists.</span><br></pre></td></tr></table></figure>
-code block end.</code></pre><p>nested codeblocks:</p>
+        <h2 id="Preface"><a href="#Preface" class="headerlink" title="Preface"></a>Preface</h2><p>Although it is easy to update pages via Hexo by editing markdown files, Markdown-codeblocks may cause trouble for displaying. This is an article to memorize a coding style that avoids such a trouble, and also corresponds to built-in Markdown viewer of VSCode.</p>
+<h2 id="Common-Styles-between-Hexo-and-VSCode"><a href="#Common-Styles-between-Hexo-and-VSCode" class="headerlink" title="Common Styles between Hexo and VSCode"></a>Common Styles between Hexo and VSCode</h2><h3 id="Preview"><a href="#Preview" class="headerlink" title="Preview"></a>Preview</h3><!-- -->
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Here is code block 0.</span><br></pre></td></tr></table></figure>
 <ul>
-<li><p>Main list</p>
-  <!-- --> 
-<pre><code><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">this may cause troubles since nested "<span class="code">```</span>" exists.</span><br></pre></td></tr></table></figure></code></pre><ul>
-<li><p>sub list</p>
-  <!-- --> 
-<pre><code><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">this may cause troubles since nested "<span class="code">```</span>" exists.</span><br></pre></td></tr></table></figure></code></pre><ul>
-<li><p>sub<sup>2</sup> list</p>
-  <!-- --> 
+<li>Main List  <!-- -->
+  <figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Here is code block 1.</span><br></pre></td></tr></table></figure>
+<ul>
+<li>Sub List  <!-- -->
+  <figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Here is code block 2.</span><br></pre></td></tr></table></figure>
 
-<pre><code><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">this may cause troubles since nested "<span class="code">```</span>" exists.</span><br></pre></td></tr></table></figure></code></pre></li>
-</ul>
 </li>
 </ul>
 </li>
 </ul>
+<h3 id="The-Code-of-the-Above-Preview"><a href="#The-Code-of-the-Above-Preview" class="headerlink" title="The Code of the Above Preview"></a>The Code of the Above Preview</h3><!-- -->
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="comment">&lt;!-- --&gt;</span></span></span><br><span class="line"><span class="code">```md</span></span><br><span class="line"><span class="code">Here is code block 0.</span></span><br><span class="line"><span class="code">```</span></span><br><span class="line"><span class="bullet">- </span>Main List</span><br><span class="line"><span class="code">    &lt;!-- --&gt;</span></span><br><span class="line"><span class="code">    ```md</span></span><br><span class="line"><span class="code">    Here is code block 1.</span></span><br><span class="line"><span class="code">    ```</span></span><br><span class="line"><span class="bullet">    - </span>Sub List</span><br><span class="line"><span class="code">        &lt;!-- --&gt;</span></span><br><span class="line"><span class="code">        ```md</span></span><br><span class="line"><span class="code">        Here is code block 2.</span></span><br><span class="line"><span class="code">        ```</span></span><br></pre></td></tr></table></figure>
 
+<h3 id="The-Code-of-“The-Code-of-the-Above-Preview”"><a href="#The-Code-of-“The-Code-of-the-Above-Preview”" class="headerlink" title="The Code of “The Code of the Above Preview”"></a>The Code of “The Code of the Above Preview”</h3><pre>
+<code>
+~~~md
+~~~
+</code>
+</pre>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://mdj982.github.io/2020/03/29/edit_formats/" data-id="ck8d0p69t0000yuyq5rywdhn3" class="article-share-link">Share</a>
+      <a data-url="http://mdj982.github.io/2020/03/29/mdview/" data-id="ck8d4ksjb00025wyq7lxq476r" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-mathview" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/03/29/mathview/" class="article-date">
+  <time datetime="2020-03-29T13:49:30.773Z" itemprop="datePublished">2020-03-29</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/03/29/mathview/">mathview</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://mdj982.github.io/2020/03/29/mathview/" data-id="ck8d4ksiw00005wyqeh105d0x" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-codeview" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/03/29/codeview/" class="article-date">
+  <time datetime="2020-03-29T13:31:56.304Z" itemprop="datePublished">2020-03-29</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/03/29/codeview/">Sample Views of Code Highlight</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Bash:</p>
+<!-- --> 
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="keyword">for</span> i <span class="keyword">in</span> &#123;0..9&#125;; <span class="keyword">do</span></span><br><span class="line">$    <span class="built_in">echo</span> <span class="string">"hello world"</span></span><br><span class="line">$ <span class="keyword">done</span></span><br></pre></td></tr></table></figure>
+<!-- --> 
+
+<p>C++:</p>
+<!-- --> 
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; ++i) &#123;</span><br><span class="line">        <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"hello world"</span> &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Python3:</p>
+<figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">10</span>):</span><br><span class="line">    print(<span class="string">"hello world"</span>)</span><br></pre></td></tr></table></figure>
+
+<p>Rust:</p>
+<figure class="highlight rs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> <span class="number">0</span>..<span class="number">10</span> &#123;</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">"hello world"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://mdj982.github.io/2020/03/29/codeview/" data-id="ck8d4ksja00015wyq1tmn0ibu" class="article-share-link">Share</a>
       
       
     </footer>
@@ -210,7 +287,15 @@ code block end.</code></pre><p>nested codeblocks:</p>
       <ul>
         
           <li>
-            <a href="/2020/03/29/edit_formats/">About Code Highlight</a>
+            <a href="/2020/03/29/mdview/">About Markdown-Codeblocks</a>
+          </li>
+        
+          <li>
+            <a href="/2020/03/29/mathview/">mathview</a>
+          </li>
+        
+          <li>
+            <a href="/2020/03/29/codeview/">Sample Views of Code Highlight</a>
           </li>
         
           <li>
@@ -261,6 +346,23 @@ code block end.</code></pre><p>nested codeblocks:</p>
 
 
 
-  </div>
+  </div><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
 </body>
 </html>
