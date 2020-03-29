@@ -4,6 +4,7 @@
 .article-inner
   @extend $block
   overflow: hidden
+  background: color-article-background
 
 .article-meta
   clearfix()
@@ -30,6 +31,8 @@
 
 .article-title
   text-decoration: none
+  border-bottom: 2px solid color-default;
+  padding-bottom: 0px;
   font-size: 2em
   font-weight: bold
   color: color-default
@@ -101,7 +104,7 @@
       margin-right: 0.5em
       margin-left: 1em
   .caption
-    color: color-grey
+    color: color-default
     display: block
     font-size: 0.9em
     margin-top: 0.5em
@@ -138,13 +141,13 @@
 
 .article-footer
   clearfix()
-  font-size: 0.85em
+  font-size: 0.9em
   line-height: line-height
   border-top: 1px solid color-border
   padding-top: line-height
   margin: 0 article-padding article-padding
   a
-    color: color-grey
+    color: #555
     text-decoration: none
     &:hover
       color: color-default
@@ -187,7 +190,7 @@
 
 .article-nav-link-wrap
   text-decoration: none
-  text-shadow: 0 1px #fff
+  text-shadow: 0 1px #111
   color: color-grey
   box-sizing: border-box
   margin-top: block-margin
@@ -260,8 +263,8 @@ $article-share-link
   display: block
   float: left
   position: relative
-  color: #999
-  text-shadow: 0 1px #fff
+  color: #bbb
+  text-shadow: 0 1px #666
   &:before
     font-size: 20px
     font-family: font-icon
