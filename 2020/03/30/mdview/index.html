@@ -5,17 +5,15 @@
   
 
   
-  <title>About Markdown-Codeblocks | mdj982&#39;s Memos</title>
+  <title>mdview | mdj982&#39;s Memos</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="PrefaceAlthough it is easy to update pages via Hexo by editing markdown files, Markdown-codeblocks may cause trouble for displaying, since Markdown syntax is too weak (or ambiguous) to nest code block">
-<meta property="og:type" content="article">
-<meta property="og:title" content="About Markdown-Codeblocks">
+  <meta property="og:type" content="article">
+<meta property="og:title" content="mdview">
 <meta property="og:url" content="https://mdj982.github.io/2020/03/30/mdview/index.html">
 <meta property="og:site_name" content="mdj982&#39;s Memos">
-<meta property="og:description" content="PrefaceAlthough it is easy to update pages via Hexo by editing markdown files, Markdown-codeblocks may cause trouble for displaying, since Markdown syntax is too weak (or ambiguous) to nest code block">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-03-29T18:32:45.672Z">
-<meta property="article:modified_time" content="2020-03-29T18:27:49.000Z">
+<meta property="article:published_time" content="2020-03-29T18:41:20.123Z">
+<meta property="article:modified_time" content="2020-03-29T18:41:20.123Z">
 <meta property="article:author" content="Dejun Mao">
 <meta name="twitter:card" content="summary">
   
@@ -69,7 +67,7 @@
         <section id="main"><article id="post-mdview" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/03/30/mdview/" class="article-date">
-  <time datetime="2020-03-29T18:32:45.672Z" itemprop="datePublished">2020-03-30</time>
+  <time datetime="2020-03-29T18:41:20.123Z" itemprop="datePublished">2020-03-30</time>
 </a>
     
   </div>
@@ -80,7 +78,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      About Markdown-Codeblocks
+      mdview
     </h1>
   
 
@@ -88,92 +86,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Preface"><a href="#Preface" class="headerlink" title="Preface"></a>Preface</h2><p>Although it is easy to update pages via Hexo by editing markdown files, Markdown-codeblocks may cause trouble for displaying, since Markdown syntax is too weak (or ambiguous) to nest code blocks. This is an article to memorize a coding style that avoids such a trouble, and also corresponds to built-in Markdown viewer of VSCode.</p>
-<h2 id="Common-Styles-between-Hexo-and-VSCode"><a href="#Common-Styles-between-Hexo-and-VSCode" class="headerlink" title="Common Styles between Hexo and VSCode"></a>Common Styles between Hexo and VSCode</h2><h3 id="Preview"><a href="#Preview" class="headerlink" title="Preview"></a>Preview</h3><p>Suppose you want to tell readers that your code will display in this way:</p>
-<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="comment">&lt;!-- code-block-0 --&gt;</span></span></span><br><span class="line"><span class="code">```md</span></span><br><span class="line"><span class="code">Internal markdown code 0.</span></span><br><span class="line"><span class="code">```</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>Main List  <figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="comment">&lt;!-- code-block-1-1 --&gt;</span></span></span><br><span class="line"><span class="code">```md</span></span><br><span class="line"><span class="code">Internal markdown code 1-1.</span></span><br><span class="line"><span class="code">```</span></span><br></pre></td></tr></table></figure>
-  <figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="comment">&lt;!-- code-block-1-2 --&gt;</span></span></span><br><span class="line"><span class="code">```md</span></span><br><span class="line"><span class="code">Internal markdown code 1-2.</span></span><br><span class="line"><span class="code">```</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>Sub List  <figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="comment">&lt;!-- code-block-2 --&gt;</span></span></span><br><span class="line"><span class="code">```md</span></span><br><span class="line"><span class="code">Internal markdown code 2.</span></span><br><span class="line"><span class="code">```</span></span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="The-Code-of-the-Preview"><a href="#The-Code-of-the-Preview" class="headerlink" title="The Code of the Preview"></a>The Code of the Preview</h3><p>Then you tell readers the code can be like this: </p>
-<figure class="highlight md">
-<table>
-<tr>
-<td class="gutter">
-<pre>
-<span class="line">1</span>
-<span class="line">2</span>
-<span class="line">3</span>
-<span class="line">4</span>
-<span class="line">5</span>
-<span class="line">6</span>
-<span class="line">7</span>
-<span class="line">8</span>
-<span class="line">9</span>
-<span class="line">10</span>
-<span class="line">11</span>
-<span class="line">12</span>
-<span class="line">13</span>
-<span class="line">14</span>
-<span class="line">15</span>
-<span class="line">16</span>
-<span class="line">17</span>
-<span class="line">18</span>
-<span class="line">19</span>
-<span class="line">20</span>
-<span class="line">21</span>
-<span class="line">22</span>
-<span class="line">23</span>
-<span class="line">24</span>
-<span class="line">25</span>
-<span class="line">26</span>
-</pre>
-</td>
-<td class="code">
-<pre>
-<span class="line"><span class="code">~~~md</span></span>
-<span class="line"><span class="code">&lt;!-- code-block-0 --&gt;</span></span>
-<span class="line"><span class="code">```md</span></span>
-<span class="line"><span class="code">Internal markdown code 0.</span></span>
-<span class="line"><span class="code">```</span></span>
-<span class="line"><span class="code">~~~</span></span>
-<span class="line"><span class="bullet">- </span>Main List</span>
-<span class="line"><span class="code">    ~~~md</span></span>
-<span class="line"><span class="code">    &lt;!-- code-block-1-1 --&gt;</span></span>
-<span class="line"><span class="code">    ```md</span></span>
-<span class="line"><span class="code">    Internal markdown code 1-1.</span></span>
-<span class="line"><span class="code">    ```</span></span>
-<span class="line"><span class="code">    ~~~</span></span>
-<span class="line"><span class="code">    ~~~md</span></span>
-<span class="line"><span class="code">    &lt;!-- code-block-1-2 --&gt;</span></span>
-<span class="line"><span class="code">    ```md</span></span>
-<span class="line"><span class="code">    Internal markdown code 1-2.</span></span>
-<span class="line"><span class="code">    ```</span></span>
-<span class="line"><span class="code">    ~~~</span></span>
-<span class="line"><span class="bullet">    - </span>Sub List</span>
-<span class="line"><span class="line"><span class="code">        ~~~md</span></span>
-<span class="line"><span class="code">        &lt;!-- code-block-2 --&gt;</span></span>
-<span class="line"><span class="code">        ```md</span></span>
-<span class="line"><span class="code">        Internal markdown code 2.</span></span>
-<span class="line"><span class="code">        ```</span></span>
-<span class="line"><span class="code">        ~~~</span></span>
-</pre>
-</td>
-</tr>
-</table>
-</figure>
-
-<h3 id="The-Code-of-“The-Code-of-the-Preview”"><a href="#The-Code-of-“The-Code-of-the-Preview”" class="headerlink" title="The Code of “The Code of the Preview”"></a>The Code of “The Code of the Preview”</h3><p>To put the above code, you should write it down in your markdown file. However it seems to be a painful task if done manually. Still, a raw html code can be emplaced in markdown file, and the grammar of this table is easy enough to allow a instant self-made code generator.</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">figure</span> <span class="attr">class</span>=<span class="string">"highlight md"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">table</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">td</span> <span class="attr">class</span>=<span class="string">"gutter"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">pre</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"line"</span>&gt;</span>1<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"line"</span>&gt;</span>2<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"line"</span>&gt;</span>3<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"line"</span>&gt;</span>4<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"line"</span>&gt;</span>5<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"line"</span>&gt;</span>6<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"line"</span>&gt;</span>7<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"line"</span>&gt;</span>8<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"line"</span>&gt;</span>9<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"line"</span>&gt;</span>10<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"line"</span>&gt;</span>11<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"line"</span>&gt;</span>12<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"line"</span>&gt;</span>13<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"line"</span>&gt;</span>14<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"line"</span>&gt;</span>15<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"line"</span>&gt;</span>16<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"line"</span>&gt;</span>17<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"line"</span>&gt;</span>18<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"line"</span>&gt;</span>19<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"line"</span>&gt;</span>20<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"line"</span>&gt;</span>21<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"line"</span>&gt;</span>22<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"line"</span>&gt;</span>23<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"line"</span>&gt;</span>24<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"line"</span>&gt;</span>25<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"line"</span>&gt;</span>26<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">pre</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">td</span> <span class="attr">class</span>=<span class="string">"code"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">pre</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"line"</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"code"</span>&gt;</span>~~~md<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"line"</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"code"</span>&gt;</span><span class="symbol">&amp;lt;</span>!-- code-block-0 --<span class="symbol">&amp;gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"line"</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"code"</span>&gt;</span>```md<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"line"</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"code"</span>&gt;</span>Internal markdown code 0.<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"line"</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"code"</span>&gt;</span>```<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"line"</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"code"</span>&gt;</span>~~~<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"line"</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"bullet"</span>&gt;</span>- <span class="tag">&lt;/<span class="name">span</span>&gt;</span>Main List<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"line"</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"code"</span>&gt;</span>    ~~~md<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"line"</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"code"</span>&gt;</span>    <span class="symbol">&amp;lt;</span>!-- code-block-1-1 --<span class="symbol">&amp;gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"line"</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"code"</span>&gt;</span>    ```md<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"line"</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"code"</span>&gt;</span>    Internal markdown code 1-1.<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"line"</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"code"</span>&gt;</span>    ```<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"line"</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"code"</span>&gt;</span>    ~~~<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"line"</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"code"</span>&gt;</span>    ~~~md<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"line"</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"code"</span>&gt;</span>    <span class="symbol">&amp;lt;</span>!-- code-block-1-2 --<span class="symbol">&amp;gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"line"</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"code"</span>&gt;</span>    ```md<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"line"</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"code"</span>&gt;</span>    Internal markdown code 1-2.<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"line"</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"code"</span>&gt;</span>    ```<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"line"</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"code"</span>&gt;</span>    ~~~<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"line"</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"bullet"</span>&gt;</span>    - <span class="tag">&lt;/<span class="name">span</span>&gt;</span>Sub List<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"line"</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"line"</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"code"</span>&gt;</span>        ~~~md<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"line"</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"code"</span>&gt;</span>        <span class="symbol">&amp;lt;</span>!-- code-block-2 --<span class="symbol">&amp;gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"line"</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"code"</span>&gt;</span>        ```md<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"line"</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"code"</span>&gt;</span>        Internal markdown code 2.<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"line"</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"code"</span>&gt;</span>        ```<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"line"</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"code"</span>&gt;</span>        ~~~<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">pre</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">figure</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="Afterword"><a href="#Afterword" class="headerlink" title="Afterword"></a>Afterword</h2><p>All the above codes are able to be previewed in VSCode built-in markdown viewer. Actually VSCode’s viewer has a slightly better parser than Hexo’s, and there is another better way to resolve this problem. Anyway, when you encounter a complicatedly collapsed preview in Hexo (while it goes well in VSCode, GitHub, etc.), emplacement of raw html code is the surest way.</p>
-
+        
       
     </div>
     <footer class="article-footer">
@@ -186,15 +99,11 @@
     
 <nav id="article-nav">
   
-    <a href="/2020/03/30/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Hello World
-        
-      </div>
-    </a>
   
+    <a href="/2020/03/30/mathview/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">mathview</div>
+    </a>
   
 </nav>
 
@@ -230,6 +139,10 @@
       <ul>
         
           <li>
+            <a href="/2020/03/30/mdview/">mdview</a>
+          </li>
+        
+          <li>
             <a href="/2020/03/30/mathview/">mathview</a>
           </li>
         
@@ -239,10 +152,6 @@
         
           <li>
             <a href="/2020/03/30/hello-world/">Hello World</a>
-          </li>
-        
-          <li>
-            <a href="/2020/03/30/mdview/">About Markdown-Codeblocks</a>
           </li>
         
       </ul>
