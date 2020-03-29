@@ -509,7 +509,7 @@ body {
 }
 .article-inner {
   overflow: hidden;
-  background: #ccc;
+  background: #ddd;
 }
 .article-meta:before,
 .article-meta:after {
@@ -552,7 +552,7 @@ body {
   transition: color 0.2s;
 }
 a.article-title:hover {
-  color: #155f98;
+  color: #1975b3;
 }
 .article-entry {
   color: #222;
@@ -589,7 +589,7 @@ a.article-title:hover {
   margin: 1.1em 0;
 }
 .article-entry a {
-  color: #155f98;
+  color: #1975b3;
   text-decoration: none;
 }
 .article-entry a:hover {
@@ -654,7 +654,7 @@ a.article-title:hover {
   margin-left: 1em;
 }
 .article-entry .caption {
-  color: #222;
+  color: #777;
   display: block;
   font-size: 0.9em;
   margin-top: 0.5em;
@@ -688,10 +688,10 @@ a.article-title:hover {
   text-decoration: none;
 }
 .article-more-link a:hover {
-  background: #155f98;
+  background: #1975b3;
   color: #fff;
   text-decoration: none;
-  text-shadow: 0 1px #114c7a;
+  text-shadow: 0 1px #145e8f;
 }
 .article-footer {
   font-size: 0.9em;
@@ -709,7 +709,7 @@ a.article-title:hover {
   clear: both;
 }
 .article-footer a {
-  color: #555;
+  color: #777;
   text-decoration: none;
 }
 .article-footer a:hover {
@@ -954,7 +954,7 @@ a.article-title:hover {
   margin: 50px 0;
 }
 #comments a {
-  color: #155f98;
+  color: #1975b3;
 }
 .archives-wrap {
   margin: 50px 0;
@@ -1010,7 +1010,7 @@ a.article-title:hover {
   line-height: 1.6em;
 }
 .archive-article-title:hover {
-  color: #155f98;
+  color: #1975b3;
 }
 .archive-article-footer {
   margin-top: 1em;
@@ -1025,7 +1025,7 @@ a.article-title:hover {
 }
 #page-nav {
   margin: 50px auto;
-  background: #fff;
+  background: #ddd;
   -webkit-box-shadow: 1px 2px 3px #ddd;
   box-shadow: 1px 2px 3px #ddd;
   border: 1px solid #aaa;
@@ -1049,7 +1049,7 @@ a.article-title:hover {
   height: 2ex;
 }
 #page-nav a {
-  color: #bbb;
+  color: #777;
   text-decoration: none;
 }
 #page-nav a:hover {
@@ -1092,7 +1092,7 @@ a.article-title:hover {
 }
 #footer-info {
   line-height: 1.6em;
-  font-size: 0.85em;
+  font-size: 0.9em;
 }
 .article-entry pre,
 .article-entry .highlight {
@@ -1205,7 +1205,7 @@ a.article-title:hover {
   margin-left: 20px;
 }
 .article-entry .gist .gist-file .gist-meta a {
-  color: #155f98;
+  color: #1975b3;
   font-weight: normal;
 }
 .article-entry .gist .gist-file .gist-meta a:hover {
@@ -1304,7 +1304,7 @@ pre .javascript .function {
 .widget {
   color: #777;
   text-shadow: 0 1px #aaa;
-  background: #ccc;
+  background: #ddd;
   -webkit-box-shadow: 0 -1px 4px #ccc inset;
   box-shadow: 0 -1px 4px #ccc inset;
   border: 1px solid #ccc;
@@ -1312,7 +1312,7 @@ pre .javascript .function {
   border-radius: 3px;
 }
 .widget a {
-  color: #155f98;
+  color: #1975b3;
   text-decoration: none;
 }
 .widget a:hover {
