@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+  
+
+  
+  <title>Math Views with Tex Notations | MDJNotes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="PrefaceHexo can automatically include Mathjax and almost correctly interpret tex commands to math formulas. The author is a VSCoder, and prefer built-in Markdown-viewer with extension “Markdown+Math”">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Math Views with Tex Notations">
+<meta property="og:url" content="https://mdj982.github.io/2020/03/31/mathview/index.html">
+<meta property="og:site_name" content="MDJNotes">
+<meta property="og:description" content="PrefaceHexo can automatically include Mathjax and almost correctly interpret tex commands to math formulas. The author is a VSCoder, and prefer built-in Markdown-viewer with extension “Markdown+Math”">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-03-30T15:00:00.000Z">
+<meta property="article:modified_time" content="2020-03-30T14:51:06.021Z">
+<meta property="article:author" content="Dejun Mao">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="MDJNotes" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+
+<body>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">MDJNotes</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://mdj982.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-mathview" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/03/31/mathview/" class="article-date">
+  <time datetime="2020-03-30T15:00:00.000Z" itemprop="datePublished">2020-03-31</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Math Views with Tex Notations
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Preface"><a href="#Preface" class="headerlink" title="Preface"></a>Preface</h2><p>Hexo can automatically include Mathjax and almost correctly interpret tex commands to math formulas. The author is a VSCoder, and prefer built-in Markdown-viewer with extension “Markdown+Math” (ID: goessner.mdmath). Therefore the only purpose is to let both Hexo and VSCode display a common file well.</p>
+<h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h2><p>Required packages:</p>
+<ul>
+<li>hexo-math</li>
+<li>hexo-renderer-kramed (or hexo-renderer-pandoc)</li>
+</ul>
+<p>Installation<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="comment">#install hexo-math</span></span><br><span class="line">$ npm install --save hexo-math</span><br><span class="line">$ <span class="comment"># check installed renderers, at the root of Hexo</span></span><br><span class="line">$ grep <span class="string">"hexo-renderer-"</span> ./package.json</span><br><span class="line">$ <span class="comment"># uninstall hexo-renderer-marked if exists</span></span><br><span class="line">$ npm uninstall --save hexo-renderer-marked;</span><br><span class="line">$ <span class="comment"># install hexo-renderer-kramed if inexists</span></span><br><span class="line">$ npm install --save hexo-renderer-kramed;</span><br></pre></td></tr></table></figure></p>
+<h2 id="Templates"><a href="#Templates" class="headerlink" title="Templates"></a>Templates</h2><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="comment">&lt;!-- inline formula --&gt;</span></span></span><br><span class="line">$formula-0$</span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="comment">&lt;!-- formula block, centered --&gt;</span></span></span><br><span class="line">$$</span><br><span class="line">formula-1 \\</span><br><span class="line">formula-2 \\</span><br><span class="line">...</span><br><span class="line">formula-n \\</span><br><span class="line">$$</span><br></pre></td></tr></table></figure>
+<h2 id="Previews"><a href="#Previews" class="headerlink" title="Previews"></a>Previews</h2><script type="math/tex; mode=display">
+    \|x\| = \mathrm{abs}(x)</script><script type="math/tex; mode=display">
+    \sum_{k=1}^3 k = \prod_{k=1}^3 k</script><script type="math/tex; mode=display">
+    f_k = \begin{cases}
+      1 & (k = 0 \lor k = 1) \\
+      f_{k - 1} + f_{k - 2} & (otherwise)
+    \end{cases}</script><script type="math/tex; mode=display">
+    \begin{eqnarray*}
+      \binom{n}{k} 
+      &=& \binom{n - 1}{k - 1} + \binom{n - 1}{k} \\
+      &=& \binom{n - 2}{k - 2} + 2\binom{n - 2}{k - 1} + \binom{n - 2}{k}
+    \end{eqnarray*}</script><script type="math/tex; mode=display">
+    \overline{P \cup Q} = \overline{P} \cap \overline{Q}</script><script type="math/tex; mode=display">
+    \varlimsup_{n \to \infty} A_n = \bigcap_{n \in \mathbb{N}}\bigcup_{k \ge n} A_k</script><script type="math/tex; mode=display">
+    \iint_{\Omega} f(x,y) dxdy</script><script type="math/tex; mode=display">
+    H = \frac{1}{\sqrt{2}}\left(
+    \begin{array}{cc}
+      1 & 1 \\
+      1 & -1
+    \end{array}
+    \right)</script><h2 id="Codes"><a href="#Codes" class="headerlink" title="Codes"></a>Codes</h2><figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="formula">$$</span></span><br><span class="line"><span class="formula">    <span class="tag">\<span class="name">|</span></span>x<span class="tag">\<span class="name">|</span> = </span><span class="tag">\<span class="name">mathrm</span><span class="string">&#123;abs&#125;</span></span>(x)</span></span><br><span class="line"><span class="formula">$$</span></span><br><span class="line"><span class="formula">$$</span></span><br><span class="line"><span class="formula">    <span class="tag">\<span class="name">sum</span></span>_&#123;k=1&#125;^3 k = <span class="tag">\<span class="name">prod</span></span>_&#123;k=1&#125;^3 k</span></span><br><span class="line"><span class="formula">$$</span></span><br><span class="line"><span class="formula">$$</span></span><br><span class="line"><span class="formula">    f_k = <span class="tag">\<span class="name">begin</span><span class="string">&#123;cases&#125;</span></span></span></span><br><span class="line"><span class="formula">      1 &amp; (k = 0 <span class="tag">\<span class="name">lor</span></span> k = 1) <span class="tag">\<span class="name">\</span></span></span></span><br><span class="line"><span class="formula">      f_&#123;k - 1&#125; + f_&#123;k - 2&#125; &amp; (otherwise)</span></span><br><span class="line"><span class="formula">    <span class="tag">\<span class="name">end</span><span class="string">&#123;cases&#125;</span></span></span></span><br><span class="line"><span class="formula">$$</span></span><br><span class="line"><span class="formula">$$</span></span><br><span class="line"><span class="formula">    <span class="tag">\<span class="name">begin</span><span class="string">&#123;eqnarray*&#125;</span></span></span></span><br><span class="line"><span class="formula">      <span class="tag">\<span class="name">binom</span><span class="string">&#123;n&#125;</span><span class="string">&#123;k&#125;</span></span> </span></span><br><span class="line"><span class="formula">      &amp;=&amp; <span class="tag">\<span class="name">binom</span><span class="string">&#123;n - 1&#125;</span><span class="string">&#123;k - 1&#125;</span></span> + <span class="tag">\<span class="name">binom</span><span class="string">&#123;n - 1&#125;</span><span class="string">&#123;k&#125;</span></span> <span class="tag">\<span class="name">\</span></span></span></span><br><span class="line"><span class="formula">      &amp;=&amp; <span class="tag">\<span class="name">binom</span><span class="string">&#123;n - 2&#125;</span><span class="string">&#123;k - 2&#125;</span></span> + 2<span class="tag">\<span class="name">binom</span><span class="string">&#123;n - 2&#125;</span><span class="string">&#123;k - 1&#125;</span></span> + <span class="tag">\<span class="name">binom</span><span class="string">&#123;n - 2&#125;</span><span class="string">&#123;k&#125;</span></span></span></span><br><span class="line"><span class="formula">    <span class="tag">\<span class="name">end</span><span class="string">&#123;eqnarray*&#125;</span></span></span></span><br><span class="line"><span class="formula">$$</span></span><br><span class="line"><span class="formula">$$</span></span><br><span class="line"><span class="formula">    <span class="tag">\<span class="name">overline</span><span class="string">&#123;P \cup Q&#125;</span> = </span><span class="tag">\<span class="name">overline</span><span class="string">&#123;P&#125;</span></span> <span class="tag">\<span class="name">cap</span></span> <span class="tag">\<span class="name">overline</span><span class="string">&#123;Q&#125;</span></span></span></span><br><span class="line"><span class="formula">$$</span></span><br><span class="line"><span class="formula">$$</span></span><br><span class="line"><span class="formula">    <span class="tag">\<span class="name">varlimsup</span></span>_&#123;n <span class="tag">\<span class="name">to</span></span> <span class="tag">\<span class="name">infty</span></span>&#125; A_n = <span class="tag">\<span class="name">bigcap</span></span>_&#123;n <span class="tag">\<span class="name">in</span></span> <span class="tag">\<span class="name">mathbb</span><span class="string">&#123;N&#125;</span></span>&#125;<span class="tag">\<span class="name">bigcup</span></span>_&#123;k <span class="tag">\<span class="name">ge</span></span> n&#125; A_k</span></span><br><span class="line"><span class="formula">$$</span></span><br><span class="line"><span class="formula">$$</span></span><br><span class="line"><span class="formula">    <span class="tag">\<span class="name">iint</span></span>_&#123;<span class="tag">\<span class="name">Omega</span></span>&#125; f(x,y) dxdy</span></span><br><span class="line"><span class="formula">$$</span></span><br><span class="line"><span class="formula">$$</span></span><br><span class="line"><span class="formula">    H = <span class="tag">\<span class="name">frac</span><span class="string">&#123;1&#125;</span><span class="string">&#123;\sqrt&#123;2&#125;</span></span>&#125;<span class="tag">\<span class="name">left</span></span>(</span></span><br><span class="line"><span class="formula">    <span class="tag">\<span class="name">begin</span><span class="string">&#123;array&#125;</span><span class="string">&#123;cc&#125;</span></span></span></span><br><span class="line"><span class="formula">      1 &amp; 1 <span class="tag">\<span class="name">\</span></span></span></span><br><span class="line"><span class="formula">      1 &amp; -1</span></span><br><span class="line"><span class="formula">    <span class="tag">\<span class="name">end</span><span class="string">&#123;array&#125;</span></span></span></span><br><span class="line"><span class="formula">    <span class="tag">\<span class="name">right</span></span>)</span></span><br><span class="line"><span class="formula">$$</span></span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://mdj982.github.io/2020/03/31/mathview/" data-id="ck8eld1lv0002t4yq9r6i6yie" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2020/03/30/mdview/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">About Markdown-Codeblocks</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/03/31/mathview/">Math Views with Tex Notations</a>
+          </li>
+        
+          <li>
+            <a href="/2020/03/30/mdview/">About Markdown-Codeblocks</a>
+          </li>
+        
+          <li>
+            <a href="/2020/03/29/codeview/">Sample Views of Code Highlight</a>
+          </li>
+        
+          <li>
+            <a href="/2020/03/29/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 Dejun Mao<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
+</body>
+</html>
