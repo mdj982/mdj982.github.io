@@ -604,7 +604,6 @@ a.article-title:hover {
 .article-entry img,
 .article-entry video {
   max-width: 100%;
-  height: auto;
   display: block;
   margin: auto;
 }
@@ -1141,7 +1140,7 @@ a.article-title:hover {
 }
 .article-entry .highlight figcaption {
   font-size: 0.85em;
-  color: #999;
+  color: #aaa;
   line-height: 1em;
   margin-bottom: 1em;
 }
@@ -1198,7 +1197,7 @@ a.article-title:hover {
 }
 .article-entry .gist .gist-file .gist-meta {
   background: #2d2d2d;
-  color: #999;
+  color: #aaa;
   font: 0.85em -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   text-shadow: 0 0;
   padding: 0;
@@ -1214,7 +1213,7 @@ a.article-title:hover {
 }
 pre .comment,
 pre .title {
-  color: #999;
+  color: #aaa;
 }
 pre .variable,
 pre .attribute,
@@ -1228,7 +1227,7 @@ pre .html .doctype,
 pre .css .id,
 pre .css .class,
 pre .css .pseudo {
-  color: #f2777a;
+  color: #e2878a;
 }
 pre .number,
 pre .preprocessor,
@@ -1236,12 +1235,12 @@ pre .built_in,
 pre .literal,
 pre .params,
 pre .constant {
-  color: #f99157;
+  color: #df9167;
 }
 pre .class,
 pre .ruby .class .title,
 pre .css .rules .attribute {
-  color: #9c9;
+  color: #8c8;
 }
 pre .string,
 pre .value,
@@ -1249,7 +1248,7 @@ pre .inheritance,
 pre .header,
 pre .ruby .symbol,
 pre .xml .cdata {
-  color: #9c9;
+  color: #8c8;
 }
 pre .css .hexcolor {
   color: #6cc;
