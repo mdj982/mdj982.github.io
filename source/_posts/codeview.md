@@ -39,7 +39,7 @@ for x in 0..10 {
 }
 ```
 
-diff (seems unsupported):
+diff:
 ```diff
 - before
 + after
