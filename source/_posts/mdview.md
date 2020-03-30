@@ -1,9 +1,11 @@
 ---
 title: About Markdown-Codeblocks
 date: 2020-03-30
+categories:
+- HexoUsage
+tags:
+- Markdown
 ---
-
-## Preface
 
 Although it is easy to update pages via Hexo by editing markdown files, Markdown-codeblocks may cause trouble for displaying, since Markdown syntax is too weak (or ambiguous) to nest code blocks. This is an article to memorize a coding style that avoids such a trouble, and also corresponds to built-in Markdown viewer of VSCode.
 
@@ -184,6 +186,6 @@ To put the above code, you should write it down in your markdown file. However i
 </figure>
 ```
 
-## Afterword
+## Conclusion
 
 All the above codes are able to be previewed in VSCode built-in markdown viewer. Actually VSCode's viewer has a slightly better parser than Hexo's, and there is another better way to resolve this problem. Anyway, when you encounter a complicatedly collapsed preview in Hexo (while it goes well in VSCode, GitHub, etc.), emplacement of raw html code is the surest way.

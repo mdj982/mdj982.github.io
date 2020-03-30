@@ -1,17 +1,23 @@
 ---
 title: Math Views with Tex Notations
 date: 2020-03-31
+categories:
+- HexoUsage
+tags:
+- TeX
+- MathJax
 ---
 
-## Preface
-Hexo has a toolchain to automatically include Mathjax and almost correctly interpret tex commands to math formulas. The author is a VSCoder, and prefer built-in Markdown-viewer with extension "Markdown+Math" (ID: goessner.mdmath). Therefore the only purpose is to let both Hexo and VSCode display a common file well.
+Hexo can automatically include Mathjax and almost correctly interpret tex commands to math formulas. The author is a VSCoder, and prefer built-in Markdown-viewer with extension "Markdown+Math" (ID: goessner.mdmath). Therefore the only purpose is to let both Hexo and VSCode display a common file well.
 
 ## Installation
-Required renderers:
+Required packages:
+- hexo-math
 - hexo-renderer-kramed (or hexo-renderer-pandoc)
 
-Installation
 ```bash
+$ #install hexo-math
+$ npm install --save hexo-math
 $ # check installed renderers, at the root of Hexo
 $ grep "hexo-renderer-" ./package.json
 $ # uninstall hexo-renderer-marked if exists
@@ -24,7 +30,7 @@ $ npm install --save hexo-renderer-kramed;
 
 ~~~md
     <!-- inline formula -->
-    $ formula-0 $
+    $formula-0$
 
     <!-- formula block, centered -->
     $$
@@ -36,24 +42,82 @@ $ npm install --save hexo-renderer-kramed;
 ~~~
 
 ## Previews
-### Fraction
 
 $$
-    x = \frac{a}{b} = \left( \frac{a}{b} \right) = \frac{1}{\frac{b}{a}} = \cfrac{1}{\cfrac{b}{a}}
-$$
-
-### Absolute
-$$
-    ||x|| = abs(x) \\
     \|x\| = \mathrm{abs}(x)
 $$
-
 $$
-A = \left(
-    \begin{array}{ccc}
-      a & b & c \\
-      d & e & f \\
-      g & h & i
+    \sum_{k=1}^3 k = \prod_{k=1}^3 k
+$$
+$$
+    f_k = \begin{cases}
+      1 & (k = 0 \lor k = 1) \\
+      f_{k - 1} + f_{k - 2} & (otherwise)
+    \end{cases}
+$$
+$$
+    \begin{eqnarray*}
+      \binom{n}{k} 
+      &=& \binom{n - 1}{k - 1} + \binom{n - 1}{k} \\
+      &=& \binom{n - 2}{k - 2} + 2\binom{n - 2}{k - 1} + \binom{n - 2}{k}
+    \end{eqnarray*}
+$$
+$$
+    \overline{P \cup Q} = \overline{P} \cap \overline{Q}
+$$
+$$
+    \varlimsup_{n \to \infty} A_n = \bigcap_{n \in \mathbb{N}}\bigcup_{k \ge n} A_k
+$$
+$$
+    \iint_{\Omega} f(x,y) dxdy
+$$
+$$
+    H = \frac{1}{\sqrt{2}}\left(
+    \begin{array}{cc}
+      1 & 1 \\
+      1 & -1
     \end{array}
-  \right)
+    \right)
 $$
+
+
+## Codes
+
+```tex
+$$
+    \|x\| = \mathrm{abs}(x)
+$$
+$$
+    \sum_{k=1}^3 k = \prod_{k=1}^3 k
+$$
+$$
+    f_k = \begin{cases}
+      1 & (k = 0 \lor k = 1) \\
+      f_{k - 1} + f_{k - 2} & (otherwise)
+    \end{cases}
+$$
+$$
+    \begin{eqnarray*}
+      \binom{n}{k} 
+      &=& \binom{n - 1}{k - 1} + \binom{n - 1}{k} \\
+      &=& \binom{n - 2}{k - 2} + 2\binom{n - 2}{k - 1} + \binom{n - 2}{k}
+    \end{eqnarray*}
+$$
+$$
+    \overline{P \cup Q} = \overline{P} \cap \overline{Q}
+$$
+$$
+    \varlimsup_{n \to \infty} A_n = \bigcap_{n \in \mathbb{N}}\bigcup_{k \ge n} A_k
+$$
+$$
+    \iint_{\Omega} f(x,y) dxdy
+$$
+$$
+    H = \frac{1}{\sqrt{2}}\left(
+    \begin{array}{cc}
+      1 & 1 \\
+      1 & -1
+    \end{array}
+    \right)
+$$
+```

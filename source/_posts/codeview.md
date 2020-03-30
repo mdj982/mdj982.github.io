@@ -1,6 +1,9 @@
 ---
 title: Sample Views of Code Highlight
 date: 2020-03-29
+categories:
+- HexoUsage
+tags:
 ---
 
 Bash:
