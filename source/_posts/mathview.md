@@ -26,6 +26,21 @@ $ # install hexo-renderer-kramed if inexists
 $ npm install --save hexo-renderer-kramed;
 ```
 
+## Configuration
+
+MathJax source link has been changed in 2017 (https://www.mathjax.org/cdn-shutting-down/). The link shown below is available.
+
+```diff _config.yml
++ math:
++ engine: 'mathjax'
++ mathjax:
++ src: https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML
++ config:
++ tex2jax:
++ inlineMath: [ ['$','$'], ["\\(","\\)"] ]
++ displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+```
+
 ## Templates
 
 ~~~md
@@ -46,7 +61,7 @@ $ npm install --save hexo-renderer-kramed;
 $$
     \|x\| = \mathrm{abs}(x)
 $$
-$$
+$$ 
     \sum_{k=1}^3 k = \prod_{k=1}^3 k
 $$
 $$
