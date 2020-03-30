@@ -15,8 +15,9 @@
 <meta property="og:description" content="Referenceshttps:&#x2F;&#x2F;liolok.github.io&#x2F;en&#x2F;How-to-Add-Image-to-Hexo-Blog-Post&#x2F; InstallationRequired packages:  hexo-asset-link  Configuration _config.yml12- post_asset_folder: false+ post_asset_folder: tru">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://mdj982.github.io/2020/03/31/useimage/chained_cat.jpg">
+<meta property="og:image" content="https://mdj982.github.io/2020/03/31/useimage/chained_cat.jpg">
 <meta property="article:published_time" content="2020-03-30T15:00:00.000Z">
-<meta property="article:modified_time" content="2020-03-30T15:46:50.628Z">
+<meta property="article:modified_time" content="2020-03-30T16:08:00.470Z">
 <meta property="article:author" content="Dejun Mao">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://mdj982.github.io/2020/03/31/useimage/chained_cat.jpg">
@@ -101,7 +102,8 @@
 </ul>
 <p>Configuration</p>
 <figure class="highlight diff"><figcaption><span>_config.yml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="deletion">- post_asset_folder: false</span></span><br><span class="line"><span class="addition">+ post_asset_folder: true</span></span><br></pre></td></tr></table></figure>
-<p><img src="/2020/03/31/useimage/chained_cat.jpg" alt=""></p>
+<h2 id="Previews-and-Codes"><a href="#Previews-and-Codes" class="headerlink" title="Previews and Codes"></a>Previews and Codes</h2><p>Suppose the name of this post is “thispostname”, you should create a folder of [hexoroot]/source/_posts/thispostname . Then you can include the image by each of the follows.<br><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">Chained Cat</span>](<span class="link">./thispostname/imagename.jpg</span>)</span><br><span class="line">![<span class="string">Chained Cat</span>](<span class="link">imagename.jpg</span>)</span><br></pre></td></tr></table></figure></p>
+<p><img src="/2020/03/31/useimage/chained_cat.jpg" alt="Chained Cat"><br><img src="/2020/03/31/useimage/chained_cat.jpg" width="200"></p>
 
       
     </div>
