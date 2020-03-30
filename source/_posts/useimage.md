@@ -15,7 +15,7 @@ The relative path is [hexoroot]/source/_posts.
 
 He is one month old, but looks handsome for his age.
 
-<img src="useimage/chained_cat.jpg" width="100" height="150" align="left">
+<img src="useimage/chained_cat.jpg" width="120" height="150" align="left">
 <br style="clear:left;">
 
 His eyes are swollen red for some reasons. I'm worried about it.
@@ -23,6 +23,6 @@ His eyes are swollen red for some reasons. I'm worried about it.
 ```html
 <img src="imp_name.jpg" width="100" alt="arbitrary"><br>
 
-<img src="imp_name.jpg" width="100" align="left">
+<img src="imp_name.jpg" width="120" height="150" align="left">
 <br style="clear:left;">
 ```
