@@ -64,9 +64,9 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-useimage" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-mathview" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/03/31/useimage/" class="article-date">
+    <a href="/2020/03/31/mathview/" class="article-date">
   <time datetime="2020-03-30T15:00:00.000Z" itemprop="datePublished">2020-03-31</time>
 </a>
     
@@ -82,7 +82,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/31/useimage/">How to Upload Images</a>
+      <a class="article-title" href="/2020/03/31/mathview/">Math Views with Tex Notations</a>
     </h1>
   
 
@@ -90,18 +90,45 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>As a conclusion, the most customizable way is to just insert html tags.<br>The relative path is [hexoroot]/source/_posts.</p>
-<h2 id="Previews-and-Codes"><a href="#Previews-and-Codes" class="headerlink" title="Previews and Codes"></a>Previews and Codes</h2><p><img src="/2020/03/31/useimage/chained_cat.jpg" width="100" alt="Chained Cat"><br></p>
-<p>He is one month old, but looks handsome for his age.</p>
-<p><img src="/2020/03/31/useimage/chained_cat.jpg" width="120" height="150" align="left"><br><br style="clear:left;"></p>
-<p>His eyes are swollen red for some reasons. I’m worried about it.</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"imp_name.jpg"</span> <span class="attr">width</span>=<span class="string">"100"</span> <span class="attr">alt</span>=<span class="string">"arbitrary"</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"imp_name.jpg"</span> <span class="attr">width</span>=<span class="string">"120"</span> <span class="attr">height</span>=<span class="string">"150"</span> <span class="attr">align</span>=<span class="string">"left"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">br</span> <span class="attr">style</span>=<span class="string">"clear:left;"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+        <p>Hexo can automatically include Mathjax and almost correctly interpret tex commands to math formulas. The author is a VSCoder, and prefer built-in Markdown-viewer with extension “Markdown+Math” (ID: goessner.mdmath). Therefore the only purpose is to let both Hexo and VSCode display a common file well.</p>
+<h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h2><p>Required packages:</p>
+<ul>
+<li>hexo-math</li>
+<li>hexo-renderer-kramed (or hexo-renderer-pandoc)</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="comment">#install hexo-math</span></span><br><span class="line">$ npm install --save hexo-math</span><br><span class="line">$ <span class="comment"># check installed renderers, at the root of Hexo</span></span><br><span class="line">$ grep <span class="string">"hexo-renderer-"</span> ./package.json</span><br><span class="line">$ <span class="comment"># uninstall hexo-renderer-marked if exists</span></span><br><span class="line">$ npm uninstall --save hexo-renderer-marked;</span><br><span class="line">$ <span class="comment"># install hexo-renderer-kramed if inexists</span></span><br><span class="line">$ npm install --save hexo-renderer-kramed;</span><br></pre></td></tr></table></figure>
+<h2 id="Configuration"><a href="#Configuration" class="headerlink" title="Configuration"></a>Configuration</h2><p>MathJax source link has been changed in 2017 (<a href="https://www.mathjax.org/cdn-shutting-down/" target="_blank" rel="noopener">https://www.mathjax.org/cdn-shutting-down/</a>). The link shown below is available.</p>
+<figure class="highlight diff"><figcaption><span>_config.yml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="addition">+ math:</span></span><br><span class="line"><span class="addition">+ engine: 'mathjax'</span></span><br><span class="line"><span class="addition">+ mathjax:</span></span><br><span class="line"><span class="addition">+ src: https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML</span></span><br><span class="line"><span class="addition">+ config:</span></span><br><span class="line"><span class="addition">+ tex2jax:</span></span><br><span class="line"><span class="addition">+ inlineMath: [ ['$','$'], ["\\(","\\)"] ]</span></span><br><span class="line"><span class="addition">+ displayMath: [ ['$$','$$'], ["\\[","\\]"] ]</span></span><br></pre></td></tr></table></figure>
+<h2 id="Templates"><a href="#Templates" class="headerlink" title="Templates"></a>Templates</h2><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="comment">&lt;!-- inline formula --&gt;</span></span></span><br><span class="line">$formula-0$</span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="comment">&lt;!-- formula block, centered --&gt;</span></span></span><br><span class="line">$$</span><br><span class="line">formula-1 \\</span><br><span class="line">formula-2 \\</span><br><span class="line">...</span><br><span class="line">formula-n \\</span><br><span class="line">$$</span><br></pre></td></tr></table></figure>
+<h2 id="Previews"><a href="#Previews" class="headerlink" title="Previews"></a>Previews</h2><script type="math/tex; mode=display">
+    \|x\| = \mathrm{abs}(x)</script><script type="math/tex; mode=display">
+    \sum_{k=1}^3 k = \prod_{k=1}^3 k</script><script type="math/tex; mode=display">
+    f_k = \begin{cases}
+      1 & (k = 0 \lor k = 1) \\
+      f_{k - 1} + f_{k - 2} & (otherwise)
+    \end{cases}</script><script type="math/tex; mode=display">
+    \begin{eqnarray*}
+      \binom{n}{k} 
+      &=& \binom{n - 1}{k - 1} + \binom{n - 1}{k} \\
+      &=& \binom{n - 2}{k - 2} + 2\binom{n - 2}{k - 1} + \binom{n - 2}{k}
+    \end{eqnarray*}</script><script type="math/tex; mode=display">
+    \overline{P \cup Q} = \overline{P} \cap \overline{Q}</script><script type="math/tex; mode=display">
+    \varlimsup_{n \to \infty} A_n = \bigcap_{n \in \mathbb{N}}\bigcup_{k \ge n} A_k</script><script type="math/tex; mode=display">
+    \iint_{\Omega} f(x,y) dxdy</script><script type="math/tex; mode=display">
+    H = \frac{1}{\sqrt{2}}\left(
+    \begin{array}{cc}
+      1 & 1 \\
+      1 & -1
+    \end{array}
+    \right)</script><h2 id="Codes"><a href="#Codes" class="headerlink" title="Codes"></a>Codes</h2><figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="formula">$$</span></span><br><span class="line"><span class="formula">    <span class="tag">\<span class="name">|</span></span>x<span class="tag">\<span class="name">|</span> = </span><span class="tag">\<span class="name">mathrm</span><span class="string">&#123;abs&#125;</span></span>(x)</span></span><br><span class="line"><span class="formula">$$</span></span><br><span class="line"><span class="formula">$$</span></span><br><span class="line"><span class="formula">    <span class="tag">\<span class="name">sum</span></span>_&#123;k=1&#125;^3 k = <span class="tag">\<span class="name">prod</span></span>_&#123;k=1&#125;^3 k</span></span><br><span class="line"><span class="formula">$$</span></span><br><span class="line"><span class="formula">$$</span></span><br><span class="line"><span class="formula">    f_k = <span class="tag">\<span class="name">begin</span><span class="string">&#123;cases&#125;</span></span></span></span><br><span class="line"><span class="formula">      1 &amp; (k = 0 <span class="tag">\<span class="name">lor</span></span> k = 1) <span class="tag">\<span class="name">\</span></span></span></span><br><span class="line"><span class="formula">      f_&#123;k - 1&#125; + f_&#123;k - 2&#125; &amp; (otherwise)</span></span><br><span class="line"><span class="formula">    <span class="tag">\<span class="name">end</span><span class="string">&#123;cases&#125;</span></span></span></span><br><span class="line"><span class="formula">$$</span></span><br><span class="line"><span class="formula">$$</span></span><br><span class="line"><span class="formula">    <span class="tag">\<span class="name">begin</span><span class="string">&#123;eqnarray*&#125;</span></span></span></span><br><span class="line"><span class="formula">      <span class="tag">\<span class="name">binom</span><span class="string">&#123;n&#125;</span><span class="string">&#123;k&#125;</span></span> </span></span><br><span class="line"><span class="formula">      &amp;=&amp; <span class="tag">\<span class="name">binom</span><span class="string">&#123;n - 1&#125;</span><span class="string">&#123;k - 1&#125;</span></span> + <span class="tag">\<span class="name">binom</span><span class="string">&#123;n - 1&#125;</span><span class="string">&#123;k&#125;</span></span> <span class="tag">\<span class="name">\</span></span></span></span><br><span class="line"><span class="formula">      &amp;=&amp; <span class="tag">\<span class="name">binom</span><span class="string">&#123;n - 2&#125;</span><span class="string">&#123;k - 2&#125;</span></span> + 2<span class="tag">\<span class="name">binom</span><span class="string">&#123;n - 2&#125;</span><span class="string">&#123;k - 1&#125;</span></span> + <span class="tag">\<span class="name">binom</span><span class="string">&#123;n - 2&#125;</span><span class="string">&#123;k&#125;</span></span></span></span><br><span class="line"><span class="formula">    <span class="tag">\<span class="name">end</span><span class="string">&#123;eqnarray*&#125;</span></span></span></span><br><span class="line"><span class="formula">$$</span></span><br><span class="line"><span class="formula">$$</span></span><br><span class="line"><span class="formula">    <span class="tag">\<span class="name">overline</span><span class="string">&#123;P \cup Q&#125;</span> = </span><span class="tag">\<span class="name">overline</span><span class="string">&#123;P&#125;</span></span> <span class="tag">\<span class="name">cap</span></span> <span class="tag">\<span class="name">overline</span><span class="string">&#123;Q&#125;</span></span></span></span><br><span class="line"><span class="formula">$$</span></span><br><span class="line"><span class="formula">$$</span></span><br><span class="line"><span class="formula">    <span class="tag">\<span class="name">varlimsup</span></span>_&#123;n <span class="tag">\<span class="name">to</span></span> <span class="tag">\<span class="name">infty</span></span>&#125; A_n = <span class="tag">\<span class="name">bigcap</span></span>_&#123;n <span class="tag">\<span class="name">in</span></span> <span class="tag">\<span class="name">mathbb</span><span class="string">&#123;N&#125;</span></span>&#125;<span class="tag">\<span class="name">bigcup</span></span>_&#123;k <span class="tag">\<span class="name">ge</span></span> n&#125; A_k</span></span><br><span class="line"><span class="formula">$$</span></span><br><span class="line"><span class="formula">$$</span></span><br><span class="line"><span class="formula">    <span class="tag">\<span class="name">iint</span></span>_&#123;<span class="tag">\<span class="name">Omega</span></span>&#125; f(x,y) dxdy</span></span><br><span class="line"><span class="formula">$$</span></span><br><span class="line"><span class="formula">$$</span></span><br><span class="line"><span class="formula">    H = <span class="tag">\<span class="name">frac</span><span class="string">&#123;1&#125;</span><span class="string">&#123;\sqrt&#123;2&#125;</span></span>&#125;<span class="tag">\<span class="name">left</span></span>(</span></span><br><span class="line"><span class="formula">    <span class="tag">\<span class="name">begin</span><span class="string">&#123;array&#125;</span><span class="string">&#123;cc&#125;</span></span></span></span><br><span class="line"><span class="formula">      1 &amp; 1 <span class="tag">\<span class="name">\</span></span></span></span><br><span class="line"><span class="formula">      1 &amp; -1</span></span><br><span class="line"><span class="formula">    <span class="tag">\<span class="name">end</span><span class="string">&#123;array&#125;</span></span></span></span><br><span class="line"><span class="formula">    <span class="tag">\<span class="name">right</span></span>)</span></span><br><span class="line"><span class="formula">$$</span></span><br></pre></td></tr></table></figure>
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://mdj982.github.io/2020/03/31/useimage/" data-id="ck8ex7ead0003gtyq75rlaq5k" class="article-share-link">Share</a>
+      <a data-url="https://mdj982.github.io/2020/03/31/mathview/" data-id="ck8excedc0001tcyqgriz8uj0" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MathJax/" rel="tag">MathJax</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/TeX/" rel="tag">TeX</a></li></ul>
+
     </footer>
   </div>
   
@@ -166,11 +193,11 @@
       <ul>
         
           <li>
-            <a href="/2020/03/31/useimage/">How to Upload Images</a>
+            <a href="/2020/03/31/mathview/">Math Views with Tex Notations</a>
           </li>
         
           <li>
-            <a href="/2020/03/31/mathview/">Math Views with Tex Notations</a>
+            <a href="/2020/03/31/useimage/">How to Upload Images</a>
           </li>
         
           <li>
@@ -225,6 +252,23 @@
 
 
 
-  </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  </div><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
 </body>
 </html>
