@@ -97,6 +97,8 @@
 <li>hexo-renderer-kramed (or hexo-renderer-pandoc)</li>
 </ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="comment">#install hexo-math</span></span><br><span class="line">$ npm install --save hexo-math</span><br><span class="line">$ <span class="comment"># check installed renderers, at the root of Hexo</span></span><br><span class="line">$ grep <span class="string">"hexo-renderer-"</span> ./package.json</span><br><span class="line">$ <span class="comment"># uninstall hexo-renderer-marked if exists</span></span><br><span class="line">$ npm uninstall --save hexo-renderer-marked;</span><br><span class="line">$ <span class="comment"># install hexo-renderer-kramed if inexists</span></span><br><span class="line">$ npm install --save hexo-renderer-kramed;</span><br></pre></td></tr></table></figure>
+<h2 id="Configuration"><a href="#Configuration" class="headerlink" title="Configuration"></a>Configuration</h2><p>MathJax source has been changed in 2017 (<a href="https://www.mathjax.org/cdn-shutting-down/" target="_blank" rel="noopener">https://www.mathjax.org/cdn-shutting-down/</a>). The link shown below is available.</p>
+<figure class="highlight diff"><figcaption><span>_config.yml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="addition">+ math:</span></span><br><span class="line"><span class="addition">+ engine: 'mathjax'</span></span><br><span class="line"><span class="addition">+ mathjax:</span></span><br><span class="line"><span class="addition">+ src: https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML</span></span><br><span class="line"><span class="addition">+ config:</span></span><br><span class="line"><span class="addition">+ tex2jax:</span></span><br><span class="line"><span class="addition">+ inlineMath: [ ['$','$'], ["\\(","\\)"] ]</span></span><br><span class="line"><span class="addition">+ displayMath: [ ['$$','$$'], ["\\[","\\]"] ]</span></span><br></pre></td></tr></table></figure>
 <h2 id="Templates"><a href="#Templates" class="headerlink" title="Templates"></a>Templates</h2><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="comment">&lt;!-- inline formula --&gt;</span></span></span><br><span class="line">$formula-0$</span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="comment">&lt;!-- formula block, centered --&gt;</span></span></span><br><span class="line">$$</span><br><span class="line">formula-1 \\</span><br><span class="line">formula-2 \\</span><br><span class="line">...</span><br><span class="line">formula-n \\</span><br><span class="line">$$</span><br></pre></td></tr></table></figure>
 <h2 id="Previews"><a href="#Previews" class="headerlink" title="Previews"></a>Previews</h2><script type="math/tex; mode=display">
     \|x\| = \mathrm{abs}(x)</script><script type="math/tex; mode=display">
@@ -122,7 +124,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://mdj982.github.io/2020/03/31/mathview/" data-id="ck8esa00n0003i0yq7girb1jm" class="article-share-link">Share</a>
+      <a data-url="https://mdj982.github.io/2020/03/31/mathview/" data-id="ck8eslegi0003xdyq507phxfo" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MathJax/" rel="tag">MathJax</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/TeX/" rel="tag">TeX</a></li></ul>
@@ -268,7 +270,7 @@
   });
 </script>
 
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML">
 </script>
 <!-- End: Injected MathJax -->
 <!-- hexo-inject:end -->
