@@ -70,6 +70,10 @@
   <time datetime="2020-03-30T15:00:00.000Z" itemprop="datePublished">2020-03-31</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/HexoUsage/">HexoUsage</a>
+  </div>
+
   </div>
   <div class="article-inner">
     
@@ -92,7 +96,7 @@
 <li>hexo-math</li>
 <li>hexo-renderer-kramed (or hexo-renderer-pandoc)</li>
 </ul>
-<p>Installation<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="comment">#install hexo-math</span></span><br><span class="line">$ npm install --save hexo-math</span><br><span class="line">$ <span class="comment"># check installed renderers, at the root of Hexo</span></span><br><span class="line">$ grep <span class="string">"hexo-renderer-"</span> ./package.json</span><br><span class="line">$ <span class="comment"># uninstall hexo-renderer-marked if exists</span></span><br><span class="line">$ npm uninstall --save hexo-renderer-marked;</span><br><span class="line">$ <span class="comment"># install hexo-renderer-kramed if inexists</span></span><br><span class="line">$ npm install --save hexo-renderer-kramed;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="comment">#install hexo-math</span></span><br><span class="line">$ npm install --save hexo-math</span><br><span class="line">$ <span class="comment"># check installed renderers, at the root of Hexo</span></span><br><span class="line">$ grep <span class="string">"hexo-renderer-"</span> ./package.json</span><br><span class="line">$ <span class="comment"># uninstall hexo-renderer-marked if exists</span></span><br><span class="line">$ npm uninstall --save hexo-renderer-marked;</span><br><span class="line">$ <span class="comment"># install hexo-renderer-kramed if inexists</span></span><br><span class="line">$ npm install --save hexo-renderer-kramed;</span><br></pre></td></tr></table></figure>
 <h2 id="Templates"><a href="#Templates" class="headerlink" title="Templates"></a>Templates</h2><figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="comment">&lt;!-- inline formula --&gt;</span></span></span><br><span class="line">$formula-0$</span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="comment">&lt;!-- formula block, centered --&gt;</span></span></span><br><span class="line">$$</span><br><span class="line">formula-1 \\</span><br><span class="line">formula-2 \\</span><br><span class="line">...</span><br><span class="line">formula-n \\</span><br><span class="line">$$</span><br></pre></td></tr></table></figure>
 <h2 id="Previews"><a href="#Previews" class="headerlink" title="Previews"></a>Previews</h2><script type="math/tex; mode=display">
     \|x\| = \mathrm{abs}(x)</script><script type="math/tex; mode=display">
@@ -118,9 +122,11 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://mdj982.github.io/2020/03/31/mathview/" data-id="ck8eld1lv0002t4yq9r6i6yie" class="article-share-link">Share</a>
+      <a data-url="https://mdj982.github.io/2020/03/31/mathview/" data-id="ck8em5gaf0001zayqdm8ed91n" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MathJax/" rel="tag">MathJax</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/TeX/" rel="tag">TeX</a></li></ul>
+
     </footer>
   </div>
   
@@ -132,7 +138,7 @@
 
   <nav id="page-nav">
     
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/">Next ≫</a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/">Next ≫</a>
   </nav>
 
 </section>
@@ -140,12 +146,33 @@
           <aside id="sidebar">
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/HexoUsage/">HexoUsage</a></li></ul>
+    </div>
+  </div>
+
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/" rel="tag">Markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MathJax/" rel="tag">MathJax</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TeX/" rel="tag">TeX</a></li></ul>
+    </div>
+  </div>
+
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/MathJax/" style="font-size: 10px;">MathJax</a> <a href="/tags/TeX/" style="font-size: 10px;">TeX</a>
+    </div>
+  </div>
+
   
     
   <div class="widget-wrap">
@@ -165,6 +192,10 @@
         
           <li>
             <a href="/2020/03/31/mathview/">Math Views with Tex Notations</a>
+          </li>
+        
+          <li>
+            <a href="/2020/03/31/useimage/">How to Upload Images</a>
           </li>
         
           <li>
