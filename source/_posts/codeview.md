@@ -35,3 +35,9 @@ for x in 0..10 {
     println!("hello world");
 }
 ```
+
+diff (seems unsupported):
+```diff
+- before
++ after
+```
