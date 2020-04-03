@@ -14,12 +14,12 @@
 <meta property="og:site_name" content="MDJNotes">
 <meta property="og:description" content="IntroductionFor some complex processing in web-apps, you can code with other strict languages (e.g. Rust, C++, Go) instead of troublesome Javascript. This note is for C++ wasm.The framework is as foll">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://mdj982.github.io/2020/04/03/emscripten-cpp/intro.jpg">
+<meta property="og:image" content="https://mdj982.github.io/2020/04/03/emscripten-cpp/intro.png">
 <meta property="article:published_time" content="2020-04-02T15:00:00.000Z">
-<meta property="article:modified_time" content="2020-04-03T00:58:37.295Z">
+<meta property="article:modified_time" content="2020-04-03T01:09:35.324Z">
 <meta property="article:author" content="Dejun Mao">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://mdj982.github.io/2020/04/03/emscripten-cpp/intro.jpg">
+<meta name="twitter:image" content="https://mdj982.github.io/2020/04/03/emscripten-cpp/intro.png">
   
     <link rel="alternate" href="/atom.xml" title="MDJNotes" type="application/atom+xml">
   
@@ -96,8 +96,9 @@
       
         <h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>For some complex processing in web-apps, you can code with other strict languages (e.g. Rust, C++, Go) instead of troublesome Javascript.</p>
 <p>This note is for C++ wasm.<br>The framework is as follows.  </p>
-<p><img src="/2020/04/03/emscripten-cpp/intro.jpg" width="700"></p>
-<h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h2><p>Reference: <a href="https://emscripten.org/docs/getting_started/downloads.html" target="_blank" rel="noopener">https://emscripten.org/docs/getting_started/downloads.html</a><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/emscripten-core/emsdk.git</span><br><span class="line"><span class="built_in">cd</span> emsdk</span><br><span class="line"><span class="comment"># optional: check available packages</span></span><br><span class="line">./emsdk list</span><br><span class="line"><span class="comment"># install and activate target package</span></span><br><span class="line">./emsdk install latest</span><br><span class="line">./emsdk activate latest</span><br><span class="line"><span class="comment"># add path temporarily</span></span><br><span class="line"><span class="built_in">source</span> ./emsdk_env.sh</span><br><span class="line"><span class="comment"># add path permanently</span></span><br><span class="line"><span class="built_in">echo</span> $<span class="string">'\nsource'</span> `<span class="built_in">pwd</span>`<span class="string">"/emsdk_env.sh &gt; /dev/null"</span>  &gt;&gt; ~/.profile</span><br><span class="line"><span class="comment"># check if emcc can be used</span></span><br><span class="line">emcc --version</span><br></pre></td></tr></table></figure><br>TIPS: If you get any error when launching emcc even if you are succeeded in the installation (e.g. “ImportError: /usr/lib/python2.7/_ctypes.so: undefined symbol: PyUnicodeUCS2_FromUnicode”), please reinstall python. Simple reinstallation may not work. You may install it locally and replace the existing one.</p>
+<p><img src="/2020/04/03/emscripten-cpp/intro.png" width="700"></p>
+<h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h2><p>Reference: <a href="https://emscripten.org/docs/getting_started/downloads.html" target="_blank" rel="noopener">https://emscripten.org/docs/getting_started/downloads.html</a><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/emscripten-core/emsdk.git</span><br><span class="line"><span class="built_in">cd</span> emsdk</span><br><span class="line"><span class="comment"># optional: check available packages</span></span><br><span class="line">./emsdk list</span><br><span class="line"><span class="comment"># install and activate target package</span></span><br><span class="line">./emsdk install latest</span><br><span class="line">./emsdk activate latest</span><br><span class="line"><span class="comment"># add path temporarily</span></span><br><span class="line"><span class="built_in">source</span> ./emsdk_env.sh</span><br><span class="line"><span class="comment"># add path permanently</span></span><br><span class="line"><span class="built_in">echo</span> $<span class="string">'\nsource'</span> `<span class="built_in">pwd</span>`<span class="string">"/emsdk_env.sh &gt; /dev/null"</span>  &gt;&gt; ~/.profile</span><br><span class="line"><span class="comment"># check if emcc can be used</span></span><br><span class="line">emcc --version</span><br></pre></td></tr></table></figure></p>
+<p>TIPS: If you get any error when launching emcc even if you are succeeded in the installation (e.g. “ImportError: /usr/lib/python2.7/_ctypes.so: undefined symbol: PyUnicodeUCS2_FromUnicode”), please reinstall python. Simple reinstallation may not work. You may install it locally and replace the existing one.</p>
 <h2 id="Quickstart"><a href="#Quickstart" class="headerlink" title="Quickstart"></a>Quickstart</h2><p>Reference:</p>
 <ul>
 <li><a href="https://emscripten.org/docs/porting/connecting_cpp_and_javascript/Interacting-with-code.html" target="_blank" rel="noopener">https://emscripten.org/docs/porting/connecting_cpp_and_javascript/Interacting-with-code.html</a></li>
@@ -126,7 +127,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://mdj982.github.io/2020/04/03/emscripten-cpp/" data-id="ck8jhdwqq00015ryqdlcj8lbt" class="article-share-link">Share</a>
+      <a data-url="https://mdj982.github.io/2020/04/03/emscripten-cpp/" data-id="ck8jhqqso0001v9yqdk51hccl" class="article-share-link">Share</a>
       
       
     </footer>
