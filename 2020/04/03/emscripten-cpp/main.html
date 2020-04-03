@@ -1,0 +1,128 @@
+<html>
+  <head>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><script src="main.js"></script>
+    <script>
+
+      // convert to Uint8Array which is compatible with 'array'
+      function get_formatted_array(ary) {
+        let n = ary.length;
+        let m = ary.BYTES_PER_ELEMENT;
+        let ret = new Uint8Array(n * m);
+        for (let i = 0; i < n; ++i) {
+          for (let j = 0; j < m; ++j) {
+            ret[i * m + j] = ary[i] >> (j * 8);
+          }
+        }
+        return ret;
+      }
+
+      // convert from ascii codes to a string
+      function read_ascii_str(ptr) {
+        let ascii_ary = [];
+        while (true) {
+          let x = Module.HEAP8[ptr/Int8Array.BYTES_PER_ELEMENT];
+          if (x == 0) break;
+          else {
+            ascii_ary.push(x);
+            ptr += Int8Array.BYTES_PER_ELEMENT;
+          }
+        }
+        return String.fromCharCode(...ascii_ary);
+      }
+
+      // Section 1
+      function run_add(d) {
+        let n = 3;
+        let nums = new Int32Array([
+          document.getElementById("num0").innerText,
+          document.getElementById("num1").innerText,
+          document.getElementById("num2").innerText
+        ]);
+        // result_ptr : int64*
+        let result_ptr = Module.ccall("run_add_C", "number", ["number", "array", "number"], [n, get_formatted_array(nums), d]);
+        // replace nums
+        for (let i = 0; i < n; ++i) {
+          nums[i] = Module.HEAP32[result_ptr/Int32Array.BYTES_PER_ELEMENT + i];
+        }
+        // substitute
+        document.getElementById("num0").innerText = nums[0];
+        document.getElementById("num1").innerText = nums[1];
+        document.getElementById("num2").innerText = nums[2];
+      }
+
+      // Section 2
+      function run_sort(d) {
+        let str = document.getElementById("inpsec2").value;
+        // result_str : string
+        let result_str = Module.ccall("run_sort_C", "string", ["string"], [str]);
+        // substitute
+        document.getElementById("prtsec2").value = result_str;
+      }
+
+      // Section 3
+      function run_all() {
+        let n = 3;
+        let nums = new Int32Array([
+          document.getElementById("num0").innerText,
+          document.getElementById("num1").innerText,
+          document.getElementById("num2").innerText
+        ]);
+        let str = document.getElementById("inpsec2").value;
+        // result_ptr: struct* { uint; int*; char* }
+        let result_ptr = Module.ccall("run_all_C", "number", ["number", "array", "string"], [n, get_formatted_array(nums), str]);
+        // read the ptr
+        // uint
+        n = Module.HEAP32[result_ptr/Int32Array.BYTES_PER_ELEMENT + 0];
+        // int*
+        let nums_ptr = Module.HEAP32[result_ptr/Int32Array.BYTES_PER_ELEMENT + 1];
+        // char*
+        let str_ptr = Module.HEAP32[result_ptr/Int32Array.BYTES_PER_ELEMENT + 2];
+        // replace nums
+        for (let i = 0; i < n; ++i) {
+          nums[i] = Module.HEAP32[nums_ptr/Int32Array.BYTES_PER_ELEMENT + i];
+        }
+        // replace str
+        str = read_ascii_str(str_ptr);
+        // substitute
+        document.getElementById("num0").innerText = nums[0];
+        document.getElementById("num1").innerText = nums[1];
+        document.getElementById("num2").innerText = nums[2];
+        document.getElementById("prtsec2").value = str;
+      }
+
+    </script>
+  <meta name="generator" content="Hexo 4.2.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+  <body>
+    
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><div style="line-height: 2em; margin-left: 1em">
+
+      <br>
+      <span style="font-size : larger">Section 1.</span><br>
+
+      <div>
+        <span id="num0">0</span><span style="margin-left: 1em"></span>
+        <span id="num1">2147483640</span><span style="margin-left: 1em"></span>
+        <span id="num2">2147483647</span><span style="margin-left: 1em"></span>
+      </div>
+      <button id="button_inc" onclick="run_add(1);">Increment!</button>
+      <button id="button_dec" onclick="run_add(-1);">Decrement!</button>
+      <br><br><br>
+      
+      <span style="font-size : larger">Section 2.</span><br>
+
+      <div>
+        Big-signed-int array: <input type="text" id="inpsec2" size="60em" value="9 -2 4 -3 4 10 -2398743223941832740934723"><br>
+        <span style="margin-left: 3.5em"></span>
+        Sorted array: <input type="text" id="prtsec2" size="60em" value=""></span>
+      </div>
+      <button id="button_sort" onclick="run_sort();">Sort!</button>
+      <br><br><br>
+
+      <span style="font-size : larger">Section 3.</span><br>
+
+      <button id="button4" onclick="run_all();">Run all! (Increment, Sort)</button>
+
+    </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+  </body>
+</html>
