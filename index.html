@@ -100,7 +100,7 @@
 </ul>
 <p>Processing:  </p>
 <ul>
-<li>Prepare a C++ code (e.g. main.cpp), and a html code (e.g. index.html) which includes main.js</li>
+<li>Prepare a C++ code (e.g. main.cpp), and a html code (e.g. main.html) which includes main.js</li>
 <li>Compile the C++ code  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">emcc -std=c++20 -o main.js main.cpp -O3 -s EXTRA_EXPORTED_RUNTIME_METHODS=<span class="string">"['ccall']"</span> -s LINKABLE=1 -s EXPORT_ALL=1</span><br></pre></td></tr></table></figure></li>
 <li>Now “main.js” and “main.wasm” must be generated.</li>
 <li>Open index.html through http/https, localhost, or VSCode+LiveServer.</li>
@@ -111,7 +111,7 @@
 <li><a href="https://emscripten.org/docs/api_reference/preamble.js.html" target="_blank" rel="noopener">https://emscripten.org/docs/api_reference/preamble.js.html</a></li>
 <li><a href="https://becominghuman.ai/" target="_blank" rel="noopener">https://becominghuman.ai/</a></li>
 </ul>
-<p><a href="https://mdj982.github.io/downloads/emscripten-cpp-src/index.html">This</a> is a sample html code.<br><a href="https://mdj982.github.io/downloads/emscripten-cpp-src/main.cpp">This</a> is a sample c++ code.<br>A corresponded .wasm and .js file is also uploaded. </p>
+<p><a href="https://mdj982.github.io/downloads/emscripten-cpp-src/main.html">This</a> is a sample html code.<br><a href="https://mdj982.github.io/downloads/emscripten-cpp-src/main.cpp">This</a> is a sample c++ code.<br>A corresponded .wasm and .js file is also uploaded. </p>
 <ul>
 <li>Section1 is to increment/decrement 1 to each 32-bit signed integer.</li>
 <li>Section2 is to sort each big integer.</li>
@@ -122,7 +122,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://mdj982.github.io/2020/04/03/emscripten-cpp/" data-id="ck8jgz9om0001awyq9u1pa4cb" class="article-share-link">Share</a>
+      <a data-url="https://mdj982.github.io/2020/04/03/emscripten-cpp/" data-id="ck8jh36b80000llyq9d0hf7as" class="article-share-link">Share</a>
       
       
     </footer>
