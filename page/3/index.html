@@ -64,10 +64,10 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-codeview" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-useimage" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/03/29/codeview/" class="article-date">
-  <time datetime="2020-03-28T15:00:00.000Z" itemprop="datePublished">2020-03-29</time>
+    <a href="/2020/03/31/useimage/" class="article-date">
+  <time datetime="2020-03-30T15:00:00.000Z" itemprop="datePublished">2020-03-31</time>
 </a>
     
   <div class="article-category">
@@ -82,7 +82,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/29/codeview/">Sample Views of Code Highlight</a>
+      <a class="article-title" href="/2020/03/31/useimage/">How to Upload Images</a>
     </h1>
   
 
@@ -90,16 +90,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Bash:<br><!-- --><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="keyword">for</span> i <span class="keyword">in</span> &#123;0..9&#125;; <span class="keyword">do</span></span><br><span class="line">$    <span class="built_in">echo</span> <span class="string">"hello world"</span></span><br><span class="line">$ <span class="keyword">done</span></span><br></pre></td></tr></table></figure><br><!-- --> </p>
-<p>C++:<br><!-- --><br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; ++i) &#123;</span><br><span class="line">        <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"hello world"</span> &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>Python3:<br><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">10</span>):</span><br><span class="line">    print(<span class="string">"hello world"</span>)</span><br></pre></td></tr></table></figure></p>
-<p>Rust:<br><figure class="highlight rs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> <span class="number">0</span>..<span class="number">10</span> &#123;</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">"hello world"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>diff:<br><figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="deletion">- before</span></span><br><span class="line"><span class="addition">+ after</span></span><br></pre></td></tr></table></figure></p>
-
+        <p>As a conclusion, the most customizable way is to just insert html tags.<br>The relative path is [hexoroot]/source/_posts.</p>
+<h2 id="Previews-and-Codes"><a href="#Previews-and-Codes" class="headerlink" title="Previews and Codes"></a>Previews and Codes</h2><p><img src="/2020/03/31/useimage/chained_cat.jpg" width="100" alt="Chained Cat"><br></p>
+<p>He is one month old, but looks handsome for his age.</p>
+<p><img src="/2020/03/31/useimage/chained_cat.jpg" width="120" height="150" align="left"><br><br style="clear:left;"></p>
+<p>His eyes are swollen red for some reasons. I’m worried about it.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"imp_name.jpg"</span> <span class="attr">width</span>=<span class="string">"100"</span> <span class="attr">alt</span>=<span class="string">"arbitrary"</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"imp_name.jpg"</span> <span class="attr">width</span>=<span class="string">"120"</span> <span class="attr">height</span>=<span class="string">"150"</span> <span class="attr">align</span>=<span class="string">"left"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">br</span> <span class="attr">style</span>=<span class="string">"clear:left;"</span>&gt;</span></span><br></pre></td></tr></table></figure>
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://mdj982.github.io/2020/03/29/codeview/" data-id="ck8exced70000tcyqchcv53ap" class="article-share-link">Share</a>
+      <a data-url="https://mdj982.github.io/2020/03/31/useimage/" data-id="ck8jgl1f00005fryq2ntn9rpo" class="article-share-link">Share</a>
       
       
     </footer>
@@ -113,7 +113,7 @@
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/page/2/">≪ Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/">Next ≫</a>
+    <a class="extend prev" rel="prev" href="/page/2/">≪ Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/4/">Next ≫</a>
   </nav>
 
 </section>
@@ -124,7 +124,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/HexoUsage/">HexoUsage</a></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/HexoUsage/">HexoUsage</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/WebAssembly/">WebAssembly</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/WebAssembly/Emscripten/">Emscripten</a></li></ul></li></ul>
     </div>
   </div>
 
@@ -153,7 +153,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li></ul>
     </div>
   </div>
 
@@ -164,6 +164,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2020/04/03/emscripten-cpp/">Calling C++ From Javascript in Web-Apps via Webassembly</a>
+          </li>
         
           <li>
             <a href="/2020/03/31/mathview/">Math Views with Tex Notations</a>
@@ -225,23 +229,6 @@
 
 
 
-  </div><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]}});
-</script>
-
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i=0; i < all.length; i += 1) {
-      all[i].SourceElement().parentNode.className += ' has-jax';
-    }
-  });
-</script>
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML">
-</script>
-<!-- End: Injected MathJax -->
-<!-- hexo-inject:end -->
+  </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 </html>
