@@ -64,12 +64,16 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-codeview" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/03/29/hello-world/" class="article-date">
+    <a href="/2020/03/29/codeview/" class="article-date">
   <time datetime="2020-03-28T15:00:00.000Z" itemprop="datePublished">2020-03-29</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/HexoUsage/">HexoUsage</a>
+  </div>
+
   </div>
   <div class="article-inner">
     
@@ -78,7 +82,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/29/hello-world/">Hello World</a>
+      <a class="article-title" href="/2020/03/29/codeview/">Sample Views of Code Highlight</a>
     </h1>
   
 
@@ -86,20 +90,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <p>Bash:<br><!-- --><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> &#123;0..9&#125;; <span class="keyword">do</span></span><br><span class="line">   <span class="built_in">echo</span> <span class="string">"hello world"</span></span><br><span class="line"><span class="keyword">done</span></span><br></pre></td></tr></table></figure><br><!-- --> </p>
+<p>C++:<br><!-- --><br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; ++i) &#123;</span><br><span class="line">        <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"hello world"</span> &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>Python3:<br><figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">10</span>):</span><br><span class="line">    print(<span class="string">"hello world"</span>)</span><br></pre></td></tr></table></figure></p>
+<p>Rust:<br><figure class="highlight rs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> <span class="number">0</span>..<span class="number">10</span> &#123;</span><br><span class="line">    <span class="built_in">println!</span>(<span class="string">"hello world"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>diff:<br><figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="deletion">- before</span></span><br><span class="line"><span class="addition">+ after</span></span><br></pre></td></tr></table></figure></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://mdj982.github.io/2020/03/29/hello-world/" data-id="ck8k3bj630003lpyqbaty497s" class="article-share-link">Share</a>
+      <a data-url="https://mdj982.github.io/2020/03/29/codeview/" data-id="ck8wu5q3g00043myq3f4vg5qe" class="article-share-link">Share</a>
       
       
     </footer>
@@ -124,7 +124,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/HexoUsage/">HexoUsage</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/WebAssembly/">WebAssembly</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/WebAssembly/Emscripten/">Emscripten</a></li></ul></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/DevTools/">DevTools</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/HexoUsage/">HexoUsage</a></li></ul>
     </div>
   </div>
 
@@ -134,26 +134,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/MathJax/" rel="tag">MathJax</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TeX/" rel="tag">TeX</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/MathJax/" style="font-size: 10px;">MathJax</a> <a href="/tags/TeX/" style="font-size: 10px;">TeX</a>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Emscripten/" rel="tag">Emscripten</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MathJax/" rel="tag">MathJax</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TeX/" rel="tag">TeX</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/WebAssembly/" rel="tag">WebAssembly</a></li></ul>
     </div>
   </div>
 
@@ -170,19 +151,19 @@
           </li>
         
           <li>
-            <a href="/2020/03/31/mathview/">Math Views with Tex Notations</a>
-          </li>
-        
-          <li>
             <a href="/2020/03/31/useimage/">How to Upload Images</a>
           </li>
         
           <li>
-            <a href="/2020/03/29/codeview/">Sample Views of Code Highlight</a>
+            <a href="/2020/03/31/mathview/">Math Views with Tex Notations</a>
           </li>
         
           <li>
             <a href="/2020/03/29/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2020/03/29/codeview/">Sample Views of Code Highlight</a>
           </li>
         
       </ul>
@@ -229,23 +210,6 @@
 
 
 
-  </div><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"displayMath":[["$$","$$"],["\\[","\\]"]]}});
-</script>
-
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i=0; i < all.length; i += 1) {
-      all[i].SourceElement().parentNode.className += ' has-jax';
-    }
-  });
-</script>
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML">
-</script>
-<!-- End: Injected MathJax -->
-<!-- hexo-inject:end -->
+  </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 </html>

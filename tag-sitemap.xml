@@ -3,6 +3,20 @@
 
 
     <url>
+        <loc>https://mdj982.github.io/tags/Emscripten/</loc>
+        <lastmod>2020-04-12T09:19:39.414Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://mdj982.github.io/tags/WebAssembly/</loc>
+        <lastmod>2020-04-12T09:19:39.414Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>https://mdj982.github.io/tags/MathJax/</loc>
         <lastmod>2020-04-02T03:18:36.872Z</lastmod>
         <changefreq>weekly</changefreq>
